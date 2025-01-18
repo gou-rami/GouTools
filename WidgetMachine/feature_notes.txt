@@ -1,0 +1,3 @@
+- Allow users to change the frame color
+- Allow users to resize the frame?
+- Artist Credit Layer on Frame
