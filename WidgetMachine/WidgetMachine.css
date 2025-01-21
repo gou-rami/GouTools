@@ -70,6 +70,7 @@ h2 {
 h3 {
     font: bold 1rem Times, serif;
     line-height: 0.3rem;
+    color: var(--primary_accent);
 }
 
 label {
