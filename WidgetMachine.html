@@ -3,131 +3,144 @@
     <head>
         <title>Widget Machine</title>
         <link rel="icon" href="./Images/favicon.ico">
+        <link rel="stylesheet" href="./WidgetMachine/WidgetMachine.css">
+        <div id="header">
+            <img id="gouTools" src="/Images/header.png"></img>
+            <img id="credit" src="/Images/credits.png"></img>
+        </div>
     </head>
 
     <body>
         <div class="content">
-            <div class="settings">
-                <label for="frames">Choose a Frame:</label>
-                <select name="Frames" id="frames" autocomplete="off">
-                    <option value="WidgetMachine/Frames/Empty" selected></option>
-                    <option value="WidgetMachine/Frames/Frame_1">1</option>
-                </select>
-
-                <br><br>
-
-                <div class="padding">
-                    <label for="h_padding">Horizontal Padding:</label> 
-                    <input id ="h_padding" type="number" value="0" autocomplete="on"></input>
-                    <br>
-                    <label for="v_padding">Vertical Padding:</label> 
-                    <input id ="v_padding" type="number" value="0" autocomplete="on"></input>
-                </div>
-
-                <br>
-
-                <div class="image">
-                    <label for="art_src">Image link:</label> 
-                    <input id ="art_src" type="url" autocomplete="off"></input>
-
-                    <br><br>
-
-                    <label for="img_scale">Image Scaling Factor:</label> 
-                    <input id ="img_scale" type="number" value="1.0" autocomplete="on"></input>
-                    <br>
-                    <label for="h_offset">Horizontal Image Position:</label> 
-                    <input id ="h_offset" type="number" value="0" autocomplete="on"></input>
-                    <br>
-                    <label for="v_offset">Vertical Image Position:</label> 
-                    <input id ="v_offset" type="number" value="0" autocomplete="on"></input>
-                    <br>
-                    <label for="rendering">Image Rendering Style:</label> 
-                    <select name="Rendering Styles" id="rendering" autocomplete="off">
-                        <option value="auto" selected></option>
-                        <option value="smooth">Smooth</option>
-                        <option value="pixelated">Pixelated</option>
-                        <option value="crisp-edges">Crisp Edges</option>
+            <div class="wrapper">
+                <div class="settings">
+                    <h1>Settings:</h1>
+                    <h2>Frame Options:</h2>
+                    <label for="frames">Choose a Frame:</label>
+                    <select name="Frames" id="frames" autocomplete="off">
+                        <option value="WidgetMachine/Frames/Empty" selected></option>
+                        <option value="WidgetMachine/Frames/Frame_1">1</option>
                     </select>
 
                     <br><br>
 
-                    <div class="overlap"></div>
-                        <h3>Image Overlap:</h3>
-                        <label for="overlay_on">Show Overlay</label> 
-                        <input id ="overlay_on" type="checkbox" checked autocomplete="off"></input>
+                    <div class="padding">
+                        <label for="h_padding">Horizontal Padding:</label> 
+                        <input id ="h_padding" type="number" value="0" autocomplete="on"></input>
+                        <br>
+                        <label for="v_padding">Vertical Padding:</label> 
+                        <input id ="v_padding" type="number" value="0" autocomplete="on"></input>
+                    </div>
+
+                    <br>
+
+                    <div class="image">
+                        <h2>Art Options:</h2>
+                        <label for="art_src">Image link:</label> 
+                        <input id ="art_src" type="url" autocomplete="off"></input>
 
                         <br><br>
 
-                        Top Edge -
-                        <label for="top_start">Start:</label> 
-                        <input id ="top_start" type="number" value="0" autocomplete="on"></input>
-                        <label for="top_end">End:</label> 
-                        <input id ="top_end" type="number" value="0" autocomplete="on"></input>
-                        <label for="top_height">Height:</label> 
-                        <input id ="top_height" type="number" value="0" autocomplete="on"></input>
-
+                        <label for="img_scale">Image Scaling Factor:</label> 
+                        <input id ="img_scale" type="number" value="1.0" autocomplete="on"></input>
                         <br>
-
-                        Left Edge -
-                        <label for="left_start">Start:</label> 
-                        <input id ="left_start" type="number" value="0" autocomplete="on"></input>
-                        <label for="left_end">End:</label> 
-                        <input id ="left_end" type="number" value="0" autocomplete="on"></input>
-                        <label for="left_height">Width:</label> 
-                        <input id ="left_height" type="number" value="0" autocomplete="on"></input>
-
+                        <label for="h_offset">Horizontal Image Position:</label> 
+                        <input id ="h_offset" type="number" value="0" autocomplete="on"></input>
                         <br>
-
-                        Bottom Edge -
-                        <label for="bottom_start">Start:</label> 
-                        <input id ="bottom_start" type="number" value="0" autocomplete="on"></input>
-                        <label for="bottom_end">End:</label> 
-                        <input id ="bottom_end" type="number" value="0" autocomplete="on"></input>
-                        <label for="bottom_height">Height:</label> 
-                        <input id ="bottom_height" type="number" value="0" autocomplete="on"></input>
-
+                        <label for="v_offset">Vertical Image Position:</label> 
+                        <input id ="v_offset" type="number" value="0" autocomplete="on"></input>
                         <br>
+                        <label for="rendering">Image Rendering Style:</label> 
+                        <select name="Rendering Styles" id="rendering" autocomplete="off">
+                            <option value="auto" selected></option>
+                            <option value="smooth">Smooth</option>
+                            <option value="pixelated">Pixelated</option>
+                            <option value="crisp-edges">Crisp Edges</option>
+                        </select>
 
-                        Right Edge -
-                        <label for="right_start">Start:</label> 
-                        <input id ="right_start" type="number" value="0" autocomplete="on"></input>
-                        <label for="right_end">End:</label> 
-                        <input id ="right_end" type="number" value="0" autocomplete="on"></input>
-                        <label for="right_height">Width:</label> 
-                        <input id ="right_height" type="number" value="0" autocomplete="on"></input>
+                        <br><br>
+
+                        <div class="overlap"></div>
+                            <h2>Art Layering:</h2>
+                            <label for="overlay_on">Show Overlay</label> 
+                            <input id ="overlay_on" type="checkbox" checked autocomplete="off"></input>
+
+                            <br><br>
+
+                            Top Edge -
+                            <label for="top_start">Start:</label> 
+                            <input id ="top_start" type="number" value="0" autocomplete="on"></input>
+                            <label for="top_end">End:</label> 
+                            <input id ="top_end" type="number" value="0" autocomplete="on"></input>
+                            <label for="top_height">Height:</label> 
+                            <input id ="top_height" type="number" value="0" autocomplete="on"></input>
+
+                            <br>
+
+                            Left Edge -
+                            <label for="left_start">Start:</label> 
+                            <input id ="left_start" type="number" value="0" autocomplete="on"></input>
+                            <label for="left_end">End:</label> 
+                            <input id ="left_end" type="number" value="0" autocomplete="on"></input>
+                            <label for="left_height">Width:</label> 
+                            <input id ="left_height" type="number" value="0" autocomplete="on"></input>
+
+                            <br>
+
+                            Bottom Edge -
+                            <label for="bottom_start">Start:</label> 
+                            <input id ="bottom_start" type="number" value="0" autocomplete="on"></input>
+                            <label for="bottom_end">End:</label> 
+                            <input id ="bottom_end" type="number" value="0" autocomplete="on"></input>
+                            <label for="bottom_height">Height:</label> 
+                            <input id ="bottom_height" type="number" value="0" autocomplete="on"></input>
+
+                            <br>
+
+                            Right Edge -
+                            <label for="right_start">Start:</label> 
+                            <input id ="right_start" type="number" value="0" autocomplete="on"></input>
+                            <label for="right_end">End:</label> 
+                            <input id ="right_end" type="number" value="0" autocomplete="on"></input>
+                            <label for="right_height">Width:</label> 
+                            <input id ="right_height" type="number" value="0" autocomplete="on"></input>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generator">
+                    <div class="preview_header">
+                        <div id="preview_label">
+                            <h1>Result Preview:</h1>
+                        </div>
+                        <div id="preview_button">
+                            <button id="generate" type="submit">Generate PNG!</button>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div id="preview_div" class="preview-layers">
+                        <canvas id="bottom" width="100" height="100" ></canvas>
+                        <canvas id="middle" width="100" height="100" style="border:2px dashed #6793f1;"></canvas>
+                        <canvas id="upper" width="100" height="100"></canvas>
+                        <canvas id="overlap" width="100" height="100"></canvas>
+                    </div>
+
+                    <div class="result">
+                        <canvas id="widget" width="100" height="100"></canvas>
                     </div>
                 </div>
             </div>
-
-            <div class="generator">
-                <div class="preview-labels">
-                    <h3>Image Preview:</h3>
-                    <button id="generate" type="submit">Generate PNG!</button>
-                </div>
-
-                <br>
-
-                <div id="preview_div" class="preview-layers">
-                    <canvas id="bottom" width="100" height="100" ></canvas>
-                    <canvas id="middle" width="100" height="100" style="border:2px dashed #6793f1;"></canvas>
-                    <canvas id="upper" width="100" height="100"></canvas>
-                    <canvas id="overlap" width="100" height="100"></canvas>
-                </div>
-
-                <div class="result">
-                    <canvas id="widget" width="100" height="100"></canvas>
-                </div>
-            </div>
         </div>
+        <br>
+        <br>
+        <br>
     </body>
 
-    <style>
-        .settings {float: left; margin-top: 20px; margin-left: 20px; margin-bottom: 20px; margin-right: 50px; line-height: 1.8}
-        .generator {overflow: hidden}
-        input[type="number"] {width: 50px}
-        .preview-layers { position:relative;}
-        .preview-layers canvas { position:absolute; top:10; left:10}
-    </style>
+    <footer>
+        <p>Site designed by Gourami #7506 on Pixel Cat's End</p>
+    </footer>
 
     <script src="WidgetMachine/preview.js"></script>
     <script src="WidgetMachine/widget.js"></script>

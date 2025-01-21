@@ -93,7 +93,12 @@ function updateBottom() {
         
         bottom_ctx.globalCompositeOperation = "source-in";
         bottom.style["image-rendering"] = rendering.value;
-        bottom_ctx.drawImage(artwork, parseInt(h_offset.value), parseInt(v_offset.value), artwork.width * img_scale.value, artwork.height * img_scale.value);
+        try {
+            bottom_ctx.drawImage(artwork, parseInt(h_offset.value), parseInt(v_offset.value), artwork.width * img_scale.value, artwork.height * img_scale.value);
+        } catch {
+            img_scale.value = ((Math.floor(frame.width, frame.height) * 1.0) / 430.0).toFixed(3);
+            artwork.src = "WidgetMachine/Frames/Art_Error.png";
+        }
     }
 }
 
