@@ -138,6 +138,10 @@ input[type=number] {
     width: 4rem;
 }
 
+select {
+    min-width: 6rem;
+}
+
 .generator {
     padding: 2rem;
     margin: 0.5rem;
@@ -162,6 +166,15 @@ input[type=number] {
 
 #preview_button {
     margin-left: auto;
+}
+
+#preview_text {
+    margin-top: 1.3rem;
+    font-style: italic;
+    color: var(--font_color);
+    line-height: 1.2rem;
+    max-width: 24rem;
+    text-wrap: wrap;
 }
 
 .preview-layers {
