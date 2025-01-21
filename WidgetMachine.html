@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>    
+    <script src="darkmode.js"></script>
+
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Widget Machine</title>
         <link rel="icon" href="./Images/favicon.ico">
         <link rel="stylesheet" href="./WidgetMachine/WidgetMachine.css">
         <div id="header">
             <img id="gouTools" src="./Images/header.png"></img>
-            <img id="credit" src="./Images/credits.png"></img>
+            <img id="credit" src="./Images/credits_light.png"></img>
         </div>
     </head>
 
@@ -14,17 +17,23 @@
         <div class="content">
             <div class="wrapper">
                 <div class="settings">
-                    <h1>Settings:</h1>
-                    <h2>Frame Options:</h2>
-                    <label for="frames">Choose a Frame:</label>
-                    <select name="Frames" id="frames" autocomplete="off">
-                        <option value="WidgetMachine/Frames/Empty" selected></option>
-                        <option value="WidgetMachine/Frames/Frame_1">1</option>
-                    </select>
 
-                    <br><br>
+                    <div class="settings_header">
+                        <div id="settings_label">
+                            <h1>Settings:</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="framing">
+                        <h2>Frame Options</h2>
+                        <label for="frames">Choose a Frame:</label>
+                        <select name="Frames" id="frames" autocomplete="off">
+                            <option value="WidgetMachine/Frames/Empty" selected></option>
+                            <option value="WidgetMachine/Frames/Frame_1">1</option>
+                        </select>
 
-                    <div class="padding">
+                        <br><br>
+
                         <label for="h_padding">Horizontal Padding:</label> 
                         <input id ="h_padding" type="number" value="0" autocomplete="on"></input>
                         <br>
@@ -32,10 +41,8 @@
                         <input id ="v_padding" type="number" value="0" autocomplete="on"></input>
                     </div>
 
-                    <br>
-
-                    <div class="image">
-                        <h2>Art Options:</h2>
+                    <div class="art">
+                        <h2>Art Options</h2>
                         <label for="art_src">Image link:</label> 
                         <input id ="art_src" type="url" autocomplete="off"></input>
 
@@ -57,54 +64,52 @@
                             <option value="pixelated">Pixelated</option>
                             <option value="crisp-edges">Crisp Edges</option>
                         </select>
+                    </div>
+
+                    <div class="overlap"></div>
+                        <h2>Art Layering</h2>
+                        <label for="overlay_on">Show Overlay</label> 
+                        <input id ="overlay_on" type="checkbox" checked autocomplete="off"></input>
 
                         <br><br>
 
-                        <div class="overlap"></div>
-                            <h2>Art Layering:</h2>
-                            <label for="overlay_on">Show Overlay</label> 
-                            <input id ="overlay_on" type="checkbox" checked autocomplete="off"></input>
+                        <h3>Top Edge</h3>
+                        <label for="top_start">Start:</label> 
+                        <input id ="top_start" type="number" value="0" autocomplete="on"></input>
+                        <label for="top_end">End:</label> 
+                        <input id ="top_end" type="number" value="0" autocomplete="on"></input>
+                        <label for="top_height">Height:</label> 
+                        <input id ="top_height" type="number" value="0" autocomplete="on"></input>
 
-                            <br><br>
+                        <br>
 
-                            Top Edge -
-                            <label for="top_start">Start:</label> 
-                            <input id ="top_start" type="number" value="0" autocomplete="on"></input>
-                            <label for="top_end">End:</label> 
-                            <input id ="top_end" type="number" value="0" autocomplete="on"></input>
-                            <label for="top_height">Height:</label> 
-                            <input id ="top_height" type="number" value="0" autocomplete="on"></input>
+                        <h3>Left Edge</h3>
+                        <label for="left_start">Start:</label> 
+                        <input id ="left_start" type="number" value="0" autocomplete="on"></input>
+                        <label for="left_end">End:</label> 
+                        <input id ="left_end" type="number" value="0" autocomplete="on"></input>
+                        <label for="left_height">Width:</label> 
+                        <input id ="left_height" type="number" value="0" autocomplete="on"></input>
 
-                            <br>
+                        <br>
 
-                            Left Edge -
-                            <label for="left_start">Start:</label> 
-                            <input id ="left_start" type="number" value="0" autocomplete="on"></input>
-                            <label for="left_end">End:</label> 
-                            <input id ="left_end" type="number" value="0" autocomplete="on"></input>
-                            <label for="left_height">Width:</label> 
-                            <input id ="left_height" type="number" value="0" autocomplete="on"></input>
+                        <h3>Bottom Edge</h3>
+                        <label for="bottom_start">Start:</label> 
+                        <input id ="bottom_start" type="number" value="0" autocomplete="on"></input>
+                        <label for="bottom_end">End:</label> 
+                        <input id ="bottom_end" type="number" value="0" autocomplete="on"></input>
+                        <label for="bottom_height">Height:</label> 
+                        <input id ="bottom_height" type="number" value="0" autocomplete="on"></input>
 
-                            <br>
+                        <br>
 
-                            Bottom Edge -
-                            <label for="bottom_start">Start:</label> 
-                            <input id ="bottom_start" type="number" value="0" autocomplete="on"></input>
-                            <label for="bottom_end">End:</label> 
-                            <input id ="bottom_end" type="number" value="0" autocomplete="on"></input>
-                            <label for="bottom_height">Height:</label> 
-                            <input id ="bottom_height" type="number" value="0" autocomplete="on"></input>
-
-                            <br>
-
-                            Right Edge -
-                            <label for="right_start">Start:</label> 
-                            <input id ="right_start" type="number" value="0" autocomplete="on"></input>
-                            <label for="right_end">End:</label> 
-                            <input id ="right_end" type="number" value="0" autocomplete="on"></input>
-                            <label for="right_height">Width:</label> 
-                            <input id ="right_height" type="number" value="0" autocomplete="on"></input>
-                        </div>
+                        <h3>Right Edge</h3>
+                        <label for="right_start">Start:</label> 
+                        <input id ="right_start" type="number" value="0" autocomplete="on"></input>
+                        <label for="right_end">End:</label> 
+                        <input id ="right_end" type="number" value="0" autocomplete="on"></input>
+                        <label for="right_height">Width:</label> 
+                        <input id ="right_height" type="number" value="0" autocomplete="on"></input>
                     </div>
                 </div>
 
@@ -122,7 +127,7 @@
 
                     <div id="preview_div" class="preview-layers">
                         <canvas id="bottom" width="100" height="100" ></canvas>
-                        <canvas id="middle" width="100" height="100" style="border:2px dashed #6793f1;"></canvas>
+                        <canvas id="middle" width="100" height="100"></canvas>
                         <canvas id="upper" width="100" height="100"></canvas>
                         <canvas id="overlap" width="100" height="100"></canvas>
                     </div>
@@ -139,7 +144,15 @@
     </body>
 
     <footer>
-        <p>Site designed by Gourami #7506 on Pixel Cat's End</p>
+        <div class="foot_wrapper">
+            <div id="footer_creds">
+                <p>Site designed by Gourami #7506 on Pixel Cat's End</p>
+            </div>
+            
+            <div id="darkmode_button">
+                <button onclick = "sitemode()"><img src="./Images/sunmoon.png"></button>
+            </div>
+        </div>
     </footer>
 
     <script src="WidgetMachine/preview.js"></script>
