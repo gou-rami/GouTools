@@ -1,4 +1,6 @@
 // Retrieve + Initialize Vars
+const TESTING = 1;
+
 var frame_src = document.getElementById("frames");
 var art_src = document.getElementById("art_src");
 
@@ -38,9 +40,11 @@ const frame = new Image();
 frame.src = "WidgetMachine/Frames/Empty.png";
 
 // Declare Bottom Layer
+const mask = new Image();
+mask.src = "WidgetMachine/Frames/Empty_clip.png";
+
 var bottom = document.getElementById("bottom");
 var bottom_ctx = bottom.getContext("2d");
-const mask = new Image();
 const artwork = new Image();
 
 // Declare Top Layer
@@ -105,6 +109,8 @@ function updateBottom() {
 function updateMiddle() {
     middle.width = frame.width + (h_padding.value * 2);
     middle.height = frame.height + (v_padding.value * 2);
+
+    middle.style["image-rendering"] = rendering.value;
     middle_ctx.drawImage(frame, h_padding.value, v_padding.value);
 }
 
@@ -124,26 +130,38 @@ function updateUpper() {
 }
 
 frame.addEventListener("load", () => {
+    if (TESTING) {console.log("Frame Loaded");}
+
     updateDiv();
     updateMiddle();
+});
+
+mask.addEventListener("load", () => {
+    if (TESTING) {console.log("Mask Loaded");}
+
     updateBottom();
     updateUpper();
 });
 
 artwork.addEventListener("load", () => {
+    if (TESTING) {console.log("Artwork Loaded");}
+
     updateBottom();
     updateUpper();
 });
 
 h_padding.addEventListener("change", () => {
+    if (TESTING) {console.log("Horizontal Padding Changed");}
+
     updateDiv();
     updateMiddle();
     updateBottom();
     updateUpper();
-    updateDiv();
 });
 
 v_padding.addEventListener("change", () => {
+    if (TESTING) {console.log("Vertical Padding Changed");}
+
     updateDiv();
     updateMiddle();
     updateBottom();
@@ -151,94 +169,134 @@ v_padding.addEventListener("change", () => {
 });
 
 h_offset.addEventListener("change", () => {
+    if (TESTING) {console.log("Horizontal Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 v_offset.addEventListener("change", () => {
+    if (TESTING) {console.log("Vertical Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 img_scale.addEventListener("change", () => {
+    if (TESTING) {console.log("Image Scale Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 rendering.addEventListener("change", () => {
+    if (TESTING) {console.log("Rendering Style Changed");}
+
     updateBottom();
+    updateMiddle();
     updateUpper();
 });
 
 overlay_on.addEventListener("change", () => {
+    if (TESTING) {console.log("Overlay Toggled");}
+
     updateOverlap();
 });
 
 top_start.addEventListener("change", () => {
+    if (TESTING) {console.log("Top Edge Start Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 top_end.addEventListener("change", () => {
+    if (TESTING) {console.log("Top Edge End Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 top_height.addEventListener("change", () => {
+    if (TESTING) {console.log("Top Edge Height Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 left_start.addEventListener("change", () => {
+    if (TESTING) {console.log("Left Edge Start Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 left_end.addEventListener("change", () => {
+    if (TESTING) {console.log("Left Edge End Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 left_height.addEventListener("change", () => {
+    if (TESTING) {console.log("Left Edge Height Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 bottom_start.addEventListener("change", () => {
+    if (TESTING) {console.log("Bottom Edge Start Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 bottom_end.addEventListener("change", () => {
+    if (TESTING) {console.log("Bottom Edge End Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 bottom_height.addEventListener("change", () => {
+    if (TESTING) {console.log("Bottom Edge Height Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 right_start.addEventListener("change", () => {
+    if (TESTING) {console.log("Right Edge Start Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 right_end.addEventListener("change", () => {
+    if (TESTING) {console.log("Right Edge End Position Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 right_height.addEventListener("change", () => {
+    if (TESTING) {console.log("Right Edge Height Changed");}
+
     updateBottom();
     updateUpper();
 });
 
 frame_src.addEventListener("change", () => {
+    if (TESTING) {console.log("Frame Source Changed");}
+
     frame.src = frame_src.value + ".png";
     mask.src = frame_src.value + "_clip.png";
 });
 
 art_src.addEventListener("change", () => {
+    if (TESTING) {console.log("Art Source Changed");}
+
+    console.log(art_src.value);
     artwork.src = art_src.value;
 });
