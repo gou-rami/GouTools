@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>    
     <script src="darkmode.js"></script>
+    <script src="credits.js"></script>
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
         <link rel="stylesheet" href="./WidgetMachine/WidgetMachine.css">
         <div id="header">
             <img id="gouTools" src="./Images/header.png"></img>
-            <img id="credit" src="./Images/credits_light.png"></img>
+            <img id="credit" src="./Images/credits_light.png" onclick="displayCredits()"></img>
         </div>
     </head>
 
@@ -34,6 +35,7 @@
                             <option value="WidgetMachine/Frames/Vertical_Canvas_Catjail">Vertical Canvas Decor w/ Catjail</option>
                             <option value="WidgetMachine/Frames/Vertical_Canvas_NoJail">Vertical Canvas Decor no Catjail</option>
                             <option value="WidgetMachine/Frames/Golden_Floral_Filigree_Square">Golden Floral Filigree - Square</option>
+                            <option value="WidgetMachine/Frames/Moonlit_Branches">Moonlit Branches</option>
                         </select>
 
                         <br><br>
@@ -146,6 +148,28 @@
                 </div>
             </div>
         </div>
+        
+        <div id="fade"></div>
+        <div id="credits">
+            <div id="credits_wrapper">
+                <div id="credits_header">
+                    <div id="credits_label">
+                        <h1 id="credits_h1">Credits:</h1>
+                    </div>
+                    <div id="credits_button">
+                        <button id="close" type="submit" onclick="hideCredits()">X</button>
+                    </div>
+                </div>
+                <hr id="credit_rule">
+                <div id="credit_text">
+                    <p><b>Fish Pixel</b>, <b>Sun Pixel</b>, and <b>Site Mode Button</b> Assets from <a class="cred_link" href="https://www.pixelcatsend.com/">Pixel Cat's End</a> © Cloudy Squid Games LLC.</p>
+                    <p><b>Horizontal Canvas</b> and <b>Vertical Canvas</b> Frame Assets from <a class="cred_link" href="https://www.pixelcatsend.com/">Pixel Cat's End</a> © Cloudy Squid Games LLC.</p>
+                    <p><b>Moonlit Branches</b> Frame Asset by <a class="cred_link" href="https://www.pixelcatsend.com/profile&id=1434">Mertisal</a> on Pixel Cat's End.</p>
+                    <p><b>Golden Floral Filigree - Square</b> Frame Asset © <a class="cred_link" href="https://www.vecteezy.com/">Vecteezy Free Vectors</a></p>
+                </div>
+            </div>
+        </div>
+
         <br>
         <br>
         <br>

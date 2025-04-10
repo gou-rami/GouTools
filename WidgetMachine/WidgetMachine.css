@@ -11,6 +11,10 @@
     --font_color: #222222;
     --primary_accent: var(--dark_color);
     --secondary_accent: var(--accent_color);
+    --input_background: var(--section_color);
+    
+    --cred_accent: var(--accent_color);
+    --cred_button: rgba(0, 0, 0, 0.2);
 }
 
 .darkmode {
@@ -19,7 +23,12 @@
     --footer_color: var(--accent_color);
     --font_color: #e0e0e0;
     --primary_accent: var(--accent_color);
-    --secondary_accent: var(--light_color)
+    --secondary_accent: var(--light_color);
+    --input_background: var(--section_color);
+
+    --cred_accent: var(--dark_color);
+
+    --cred_button: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -47,6 +56,10 @@ body {
     max-width: 12vw;
     margin-left: 1vw;
     margin-right: 2vw;
+}
+
+#credit:hover {
+    cursor: pointer;
 }
 
 .content {
@@ -93,6 +106,11 @@ input, select {
     font-weight: bold;
     font-size: 1rem;
     color: var(--background_color);
+}
+
+#generate:hover {
+    background-color: var(--secondary_accent);
+    cursor: pointer;
 }
 
 .wrapper, .settings, .generator {
@@ -222,4 +240,94 @@ footer {
     position: absolute;
     right: 0;
     padding: 0.5rem;
+}
+
+#fade {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background_color);
+    opacity: 0.85;
+}
+
+#credits {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    right: 12%;
+    width: 76%;
+    height: 70%;
+    border-radius: 25px;
+    background-color: var(--primary_accent);
+}
+
+#credits_wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#credits_header {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    overflow: clip;
+}
+
+#credits_h1 {
+    font: bold 2rem Times, serif;
+    line-height: 0.8rem;
+    color: var(--background_color);
+}
+
+#credits_label {
+    margin-right: 3rem;
+}
+
+#credits_button {
+    margin-left: auto;
+}
+
+#close {
+    background-color: var(--cred_button);
+    color: var(--cred_accent);
+    font-size: 1.2rem;
+    border-color: var(--cred_accent);
+    border-radius: 5px;
+    border-width: 2px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+#close:hover {
+    background-color: var(--background_color);
+    cursor: pointer;
+}
+
+#credit_rule {
+    border: none;
+    height: 2px;
+    background: var(--cred_accent);
+}
+
+#credit_text {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    color: var(--background_color);
+    overflow-y: scroll;
+    scrollbar-color: var(--cred_accent);
+}
+
+.cred_link {
+    font-weight: bold;
+    color: var(--cred_accent);
 }
