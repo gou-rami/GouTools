@@ -11,4 +11,13 @@ generate_button.addEventListener("click", () => {
     widget_ctx.drawImage(bottom, 0, 0);
     widget_ctx.drawImage(middle, 0, 0);
     widget_ctx.drawImage(upper, 0, 0);
+
+    
+    widget.toBlob((blob) => {
+        const newImg = document.createElement("img");
+        const url = URL.createObjectURL(blob);
+
+        newImg.src = url;
+        document.getElementById("result").appendChild(newImg);
+    });
 });
