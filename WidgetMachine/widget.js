@@ -14,10 +14,7 @@ generate_button.addEventListener("click", () => {
 
     
     widget.toBlob((blob) => {
-        const newImg = document.createElement("img");
         const url = URL.createObjectURL(blob);
-
-        newImg.src = url;
-        document.getElementById("result").appendChild(newImg);
+        document.getElementById("widget_img").src = url;
     });
 });
