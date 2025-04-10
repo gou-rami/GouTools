@@ -233,6 +233,8 @@ footer {
 
 #footer_creds {
     display: inline-block;
+    padding-left: 1rem;
+    padding-right: 4rem;
 }
 
 #darkmode_button {
@@ -244,9 +246,9 @@ footer {
 
 #fade {
     display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--background_color);
@@ -255,7 +257,7 @@ footer {
 
 #credits {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 15%;
     left: 12%;
     right: 12%;
@@ -270,6 +272,7 @@ footer {
     padding-bottom: 1.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    height: 250%;
 }
 
 #credits_header {
@@ -324,7 +327,7 @@ footer {
     font-size: 1.2rem;
     color: var(--background_color);
     overflow-y: scroll;
-    scrollbar-color: var(--cred_accent);
+    max-height: 30%;
 }
 
 .cred_link {
