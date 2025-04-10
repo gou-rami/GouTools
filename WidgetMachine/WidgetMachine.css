@@ -211,6 +211,10 @@ select {
     border: 2px dashed var(--secondary_accent);
 }
 
+#widget {
+    display: none;
+}
+
 footer {
     position: fixed;
     left: 0;

@@ -13,8 +13,8 @@ generate_button.addEventListener("click", () => {
     widget_ctx.drawImage(upper, 0, 0);
 
     
-    // widget.toBlob((blob) => {
-    //     const url = URL.createObjectURL(blob);
-    //     document.getElementById("widget_img").src = url;
-    // });
+    widget.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        document.getElementById("widget_img").src = url;
+    });
 });

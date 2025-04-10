@@ -46,6 +46,7 @@ mask.src = "WidgetMachine/Frames/Empty_clip.png";
 var bottom = document.getElementById("bottom");
 var bottom_ctx = bottom.getContext("2d");
 const artwork = new Image();
+artwork.crossOrigin = 'anonymous';
 
 // Declare Top Layer
 var upper = document.getElementById("upper");
